@@ -41,10 +41,8 @@ function App() {
 		input.focus();
 
 
-		input.onblur = () => {
-			taskTag[editTask.id].removeChild(input);
-			taskTag[editTask.id].innerHTML = input.value;
-		}
+		taskTag[editTask.id].removeChild(input);
+		input.onblur = f
 	}
 
 

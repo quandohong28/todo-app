@@ -33,20 +33,12 @@ function App() {
 	const handleEditTask = (editTask) => {
 		const input = document.createElement('input');
 		input.value = editTask.name;
-		input.style.color = 'black';
+		input.style.color = 
 		const taskTag = document.querySelectorAll('.task-name');
-		// console.log(taskTag[editTask.id]);
+		console.log(taskTag[editTask.id]);
 		taskTag[editTask.id].innerHTML = '';
 		taskTag[editTask.id].appendChild(input);
-		input.focus();
-
-
-		input.onblur = () => {
-			taskTag[editTask.id].removeChild(input);
-			taskTag[editTask.id].innerHTML = input.value;
-		}
 	}
-
 
 
 	return (

@@ -35,18 +35,10 @@ function App() {
 		input.value = editTask.name;
 		input.style.color = 'black';
 		const taskTag = document.querySelectorAll('.task-name');
-		// console.log(taskTag[editTask.id]);
+		console.log(taskTag[editTask.id]);
 		taskTag[editTask.id].innerHTML = '';
 		taskTag[editTask.id].appendChild(input);
-		input.focus();
-
-
-		input.onblur = () => {
-			taskTag[editTask.id].removeChild(input);
-			taskTag[editTask.id].innerHTML = input.value;
-		}
 	}
-
 
 
 	return (
@@ -66,6 +58,7 @@ function App() {
 						>
 							<span
 								onDoubleClick={() => handleEditTask(task)}
+								onBlur={() => handle}
 								onClick={() => handleToggleTask(task)}
 								className={`task-name ${task.isActive === true ? 'line-through' : ''}`}
 							>

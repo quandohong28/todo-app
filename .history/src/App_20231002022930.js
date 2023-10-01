@@ -39,14 +39,11 @@ function App() {
 		taskTag[editTask.id].innerHTML = '';
 		taskTag[editTask.id].appendChild(input);
 		input.focus();
-
-
-		input.onblur = () => {
-			taskTag[editTask.id].removeChild(input);
-			taskTag[editTask.id].innerHTML = input.value;
-		}
 	}
 
+	const handleConfirmEditTask = (editTask) => {
+		const taskTag = document.querySelectorAll('.task-name');
+	}
 
 
 	return (

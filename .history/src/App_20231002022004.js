@@ -33,20 +33,11 @@ function App() {
 	const handleEditTask = (editTask) => {
 		const input = document.createElement('input');
 		input.value = editTask.name;
-		input.style.color = 'black';
-		const taskTag = document.querySelectorAll('.task-name');
-		// console.log(taskTag[editTask.id]);
-		taskTag[editTask.id].innerHTML = '';
-		taskTag[editTask.id].appendChild(input);
-		input.focus();
-
-
-		input.onblur = () => {
-			taskTag[editTask.id].removeChild(input);
-			taskTag[editTask.id].innerHTML = input.value;
-		}
+		const taskTag = document.querySelector('#task-name');
+		console.log(taskTag);
+		// taskTag.innerHTML = '';
+		// taskTag.appendChild(input);
 	}
-
 
 
 	return (
@@ -65,9 +56,10 @@ function App() {
 							className='flex justify-between'
 						>
 							<span
+								id='task-name'
 								onDoubleClick={() => handleEditTask(task)}
 								onClick={() => handleToggleTask(task)}
-								className={`task-name ${task.isActive === true ? 'line-through' : ''}`}
+								className={`${task.isActive === true ? 'line-through' : ''}`}
 							>
 								{task.name}
 							</span>

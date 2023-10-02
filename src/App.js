@@ -32,11 +32,11 @@ function App() {
 
 
 	return (
-		<div className='App bg-[gray] w-[80vw] m-auto mt-[2rem] p-5 rounded text-white'>
-			<h1>TODO LIST</h1>
+		<div className='App bg-[black] w-[50vw] h-[80vh] m-auto mt-[2rem] p-5 rounded text-white'>
+			<h1 className='font-bold text-4xl'>TODO LIST</h1>
 			<div className="header flex justify-evenly p-3">
 				<input type="text" ref={inputRef} />
-				<button className='bg-blue-200 p-1 rounded' onClick={() => handleAdd()}>Add</button>
+				<button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => handleAdd()}>Add</button>
 			</div>
 
 			<ul>

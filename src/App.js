@@ -72,7 +72,7 @@ function App() {
 								{task.name}
 							</span>
 							<span>
-								<button onClick={() => handleDelete(task.id)} className='text-red-900 cursor-pointer'>X</button>
+								<button onClick={() => handleDelete(task.id)} className='text-white cursor-pointer py-1 px-3 bg-[red] rounded'>x</button>
 							</span>
 						</li>
 					))
